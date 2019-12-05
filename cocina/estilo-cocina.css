@@ -29,10 +29,14 @@ dt{font-weight: bold;
       td {text-align: center;}  
       iframe {display: block;
         /* margin: auto lo pondria centrado */
-        float: right;}
+        float: right;
+        width: 30vw;
+        height: 20vw;}
 
         /* Vamos a utilizar un recurso pro pero pro pro pro xDD. se llama media query y se trata de incluir una especie de "if" (condición) para que cambie algo en el estilo cuando tengo una pantalla pequeña */
 
         @media only screen and (max-width:500px)
             {#wrapper {width:100%}
+            iframe {width: 100%;
+                    height: 75%;}
       }

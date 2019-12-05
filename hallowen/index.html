@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My scary Halloween </title>
+    <link rel="icon" type="image/png" sizes="32x32" href="imagenes/calabaza.png">
+    <link href="https://fonts.googleapis.com/css?family=Nosifer&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="calavera.png">
+    <!-- este diseño no funciona para movil-->
+    <style>
+        body {background-color: black;}
+        #wrapper {position: relative; /* el wrapper se mueve para centrarse*/
+                  background-image:url("Imagenes/Fondo.jpg");
+                    width:1398px;
+                    height:874px;
+                    margin:auto;
+                    border-radius: 150px;
+                    box-shadow: red  20px 20px 20px 20px ;}
+        h1 {position: absolute;/* loque va dentro se mueve con él*/
+            left:900px;
+            top: 20px;
+            font-family: 'Nosifer', cursive;
+            color: red;}
+        #p1{position:absolute;  
+               left: 540px;
+               top: 100px;
+               color: red;
+               font-family: 'Nosifer', cursive;}
+        #p2{position:absolute;  
+               left: 1070px;
+               top: 600px;
+               color: red;
+               font-family: 'Nosifer', cursive;}
+        #bat {position:absolute;     
+               width:120px; 
+               height:65px;
+               top:50px;
+               left:710px;
+               /*border: solid white*/;
+               }
+        #pumpkin {position:absolute;
+                width: 260px;
+                height:240px;
+                top:525px;
+                left:790px;
+                }  
+        #esqueleto {position:absolute;
+                        width:699px;
+                        height:437px;
+                        visibility: hidden;}  
+        #bats {position:absolute;
+                width:350px;
+                height:250px;
+                top:540px;
+                left:800px;
+                visibility: hidden;}  
+                 
+
+
+        
+    </style>
+    <script>
+        function mostrar (id){
+            document.getElementById(id).style.visibility="visible";
+        }   
+        function ocultar (id){
+            document.getElementById(id).style.visibility="hidden";
+        }
+        function sonar (id){
+            document.getElementById(id).play();
+        }
+        function parar
+         (id){
+            document.getElementById(id).pause();
+        }
+    </script>
+</head>
+<body>
+    <audio id="demon">
+        <source src="Sonido/monster2.mp3" type="audio/mpeg">
+    </audio>
+    <div id="wrapper">
+        <h1>Scary halloween party</h1>
+        <p id="p1">Don´t distrub the bat OMG!!</p>
+        <p id="p2">Don´t distrub the Pumpkin OMG!!</p>
+        <div id="bat" onclick="mostrar('esqueleto');sonar('demon')"></div>
+        <div id="pumpkin" ondblclick="mostrar('bats');sonar('demon')"></div>
+        <img id="esqueleto" onclick="ocultar('esqueleto');parar('demon')" src="Imagenes/esqueleto.gif" height="200">
+        <img id="bats" ondblclick="ocultar('bats');parar('demon')" src="Imagenes/Bat.gif" height="200">
+    
+
+    </div>
+</body>
+</html>

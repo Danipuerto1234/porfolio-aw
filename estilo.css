@@ -1,0 +1,56 @@
+/* este es el estilo de porfolio de Dany */
+#wrapper {width: 85%;
+    background-color: white;
+    margin: auto;}
+header {position: relative;
+        /* raltive para que el titulo que va dentro lo pueda colocar con absolute donde quiera*/
+        background-image: url("imagenes/bombilla.jpg");
+        height: 300px;
+        background-size: cover;
+        /* cover adapta bien la imagen responsive pero la acorta */ 
+        background-position: right;
+        /* como mi imagen tiene lo impoprtante en el centro, debo poner background-position: center
+        para que corte de los lados al empequeñecer la pagina*/ 
+        height: 300px;}
+
+#título
+ {position: absolute;
+    width:50%;
+        top:175px;
+
+        /*OJO QUE ES RARO. Para que el navegador calcule bien el centro donde poner el título, hay que 
+        indicarle estas 4 cosas*/ 
+        left:px;
+        right:25px;
+        margin-left: auto;
+        margin-right: auto;
+        
+        font-family: 'Rajdhani', sans-serif;
+        font-size:2em;
+        background-color: rgb(250, 247, 84);
+        border-radius:25px;
+        text-align: center;
+        color: rgb(32, 37, 37);}
+
+        /* Aqui empieza mi polaroid */
+        div.polaroid {
+            width: 40%;
+            background-color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            margin-bottom: 25px;
+            float:left;
+            margin:4%;
+          }
+          div.polaroid:hover{
+          opacity:0.5}
+          
+          div.container {
+            text-align: center;
+            padding: 10px 20px;
+          }
+          
+h2{text-align: center}
+
+@media only screen and (max-width: 500px){
+    div.polaroid {width: 85%;}
+}
